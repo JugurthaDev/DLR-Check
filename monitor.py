@@ -206,8 +206,7 @@ def main():
         try:
             status = check_event(name, event_id, state)
 
-            if status != "UNKNOWN":
-                new_state[event_id] = status
+            new_state[event_id] = status
 
         except requests.RequestException as error:
             print(f"Erreur HTTP pour {name}: {error}")
